@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: "dankstuff.net"
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: "dankstuff.net"
+    restart: "always"
+    ports:
+      - "42069:8080"
+    stdin_open: true

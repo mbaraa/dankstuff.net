@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Dank Stuff</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes"
+    />
+    <meta name="description" content="The dankest stuff can be." />
+    <meta
+      name="keywords"
+      content="dank,stuff,dankstuff,dank stuff,dank products,dank apps,dank sites"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/static/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Dank Stuff" />
+    <link rel="manifest" href="/static/site.webmanifest" />
+  </head>
+  <body
+    style='
+      background-image: url("{{ .BG }}"), linear-gradient(to right, #2e7d32, #FBC02D);
+      background-repeat: repeat;
+      background-size: cover;
+      padding: 0px;
+      margin: 0px;
+      background-position: center;
+      background-attachment: fixed;
+    '
+  >
+    <main style="min-height: 100dvh">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <img
+          src="/static/favicon-96x96.png"
+          style="width: 75px; height: 75px;"
+          alt="Logo"
+        />
+        <h1 style="font-size: 34px; background-color: #2e7d32; color: black; width: fit-content">
+          Dank Stuff
+        </h1>
+      </div>
+
+      <h2 style="font-size: 30px; color: #2e7d32; background-color: black; width: fit-content">
+        Current Dank Stuff:
+      </h2>
+      <ul
+        style="
+          background-image: linear-gradient(to right, orange, green, pink);
+          width: fit-content;
+          font-size: 24px;
+        "
+      >
+        {{- range .Deployments }}
+        <li style="color: white">
+          <a href="{{.Link}}">{{ .Title }}</a>
+          {{ .Description }}
+        </li>
+        {{- end }}
+      </ul>
+    </main>
+  </body>
+</html>
