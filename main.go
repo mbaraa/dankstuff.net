@@ -32,6 +32,7 @@ func main() {
 				{Title: "DankMuzikk", Link: "https://dankmuzikk.com", Description: "Create, Share and Play Music Playlists."},
 				{Title: "DankLyrics", Link: "https://danklyrics.com", Description: "Find lyrics for songs or something."},
 				{Title: "DankScreen", Link: "https://screen.dankstuff.net", Description: "Display capture card's output into your browser."},
+				{Title: "DankSim", Link: "https://danksim.com", Description: "Get an eSIM qucickly, ANYWHERE."},
 				{Title: "DankDysk", Link: "https://dankdysk.com", Description: "Magical unlimited cloud drive. (WIP)"},
 				{Title: "DankTorrent", Link: "https://dankdysk.com", Description: "Download anything as torrent. (WIP)"},
 				{Title: "DankIP", Link: "https://dankip.com", Description: "Get a public IP for any server/computer. (WIP)"},
