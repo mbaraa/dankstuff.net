@@ -1,6 +1,6 @@
 {
-  "name": "Dank Stuff",
-  "short_name": "Dank Stuff",
+  "name": "DankStuff",
+  "short_name": "DankStuff",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
