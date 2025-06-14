@@ -13,7 +13,7 @@ var (
 	//go:embed templates
 	aaa embed.FS
 
-	//go:embed static
+	//go:embed assets
 	bbb embed.FS
 )
 
@@ -22,7 +22,7 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		_ = t.Execute(w, map[string]any{
-			"BG": fmt.Sprintf("/static/bgs/%d.webp", rand.Intn(5)+1),
+			"BG": fmt.Sprintf("/assets/bgs/%d.webp", rand.Intn(5)+1),
 			"Deployments": []struct {
 				Title       string
 				Link        string
@@ -42,7 +42,20 @@ func main() {
 			},
 		})
 	})
-	http.Handle("/static/", http.FileServer(http.FS(bbb)))
+
+	http.HandleFunc("/robots.txt", func(w http.ResponseWriter, r *http.Request) {
+		robotsFile, _ := bbb.ReadFile("assets/robots.txt")
+		w.Header().Set("Content-Type", "text/plain")
+		_, _ = w.Write(robotsFile)
+	})
+	http.HandleFunc("/sitemap.xml", func(w http.ResponseWriter, r *http.Request) {
+		robotsFile, _ := bbb.ReadFile("assets/sitemap.xml")
+		w.Header().Set("Content-Type", "text/plain")
+		_, _ = w.Write(robotsFile)
+	})
+
+	http.Handle("/assets/", http.FileServer(http.FS(bbb)))
+
 	log.Println("server running on port 8080")
 	log.Fatalln(http.ListenAndServe(":8080", nil))
 }
