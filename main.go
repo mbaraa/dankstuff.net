@@ -34,7 +34,7 @@ func main() {
 				{Title: "DankScreen", Link: "https://screen.dankstuff.net", Description: "Display capture card's output into your browser."},
 				{Title: "DankTodo", Link: "https://todo.dankstuff.net", Description: "The first htmx app with C (Ulfius)"},
 				{Title: "DankNotes", Link: "https://notes.dankstuff.net", Description: "Bootleg version of Notion and Google Notes. (WIP)"},
-				{Title: "DankSim", Link: "https://danksim.com", Description: "Get an eSIM qucickly, ANYWHERE."},
+				// {Title: "DankSim", Link: "https://danksim.com", Description: "Get an eSIM qucickly, ANYWHERE."},
 				{Title: "DankDysk", Link: "https://dankdysk.com", Description: "Magical unlimited cloud drive. (WIP)"},
 				{Title: "DankTorrent", Link: "https://dankdysk.com", Description: "Download anything as torrent. (WIP)"},
 				{Title: "DankIP", Link: "https://dankip.com", Description: "Get a public IP for any server/computer. (WIP)"},
